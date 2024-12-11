@@ -133,7 +133,9 @@ async def capture_promt(message: types.Message, state: FSMContext, bot: Bot):
     await state.clear()
 
 
-
+@router.message(Command['get_github_url'])
+async def get_github_url(message: types.Message):
+    await message.answer("https://github.com/KhazraT/OOP--laba1", reply_markup=main_kb())
 
 
 
